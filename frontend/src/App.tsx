@@ -1,11 +1,16 @@
-import React from 'react';
-
+import { CssBaseline, MuiThemeProvider } from "@material-ui/core";
+import { SnackbarProvider } from "notistack";
+import  {Mapping}  from "./components/Mapping";
+import theme from "./theme";
 
 function App() {
   return (
-    <h1>
-      hello world
-    </h1>
+    <MuiThemeProvider theme={theme}>
+      <SnackbarProvider maxSnack={3}>
+        <CssBaseline />
+        <Mapping />
+      </SnackbarProvider>
+    </MuiThemeProvider>
   );
 }
 

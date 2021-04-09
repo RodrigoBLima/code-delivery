@@ -1,16 +1,16 @@
-import { ReactNode } from 'react';
+import { AppBar, IconButton, Toolbar, Typography } from "@material-ui/core";
+import { FunctionComponent } from "react";
+import DriverIcon from "@material-ui/icons/DriveEta";
 
-interface NavbarProps {
-  children: ReactNode;
-}
-
-function Navbar({ children }: NavbarProps) {
+export const Navbar: FunctionComponent = () => {
   return (
-    <>
-      <h1>Navbar</h1>
-      {children}
-    </>
+    <AppBar position="static">
+      <Toolbar>
+        <IconButton edge="start" color="inherit" aria-label="menu">
+          <DriverIcon />
+        </IconButton>
+        <Typography variant="h6">Code Delivery</Typography>
+      </Toolbar>
+    </AppBar>
   );
-}
-
-export default Navbar;
+};
